@@ -1,0 +1,55 @@
+Mulai
+
+    Impor modul sympy sebagai sp
+
+    Fungsi untuk Metode Newton-Raphson:
+        - Definisikan simbol 'x'
+        - Hitung turunan pertama f terhadap x
+        - Tentukan toleransi (e) dan maksimum iterasi (N)
+        - Untuk setiap iterasi hingga N:
+            - Hitung nilai f(x0)
+            - Cetak informasi iterasi
+            - Jika nilai absolut f(x0) kurang dari e:
+                - Kembalikan x0 dan jumlah iterasi
+            - Hitung nilai turunan pertama f terhadap x pada x0
+            - Jika turunan pertama nol, cetak pesan dan kembalikan None
+            - Hitung x0 yang baru menggunakan Metode Newton-Raphson
+        - Jika mencapai maksimum iterasi, cetak pesan dan kembalikan x0 dan jumlah iterasi
+
+    Fungsi untuk Metode Secant berdasarkan Metode Newton-Raphson:
+        - Definisikan simbol 'x'
+        - Tentukan toleransi (e) dan maksimum iterasi (N)
+        - Untuk setiap iterasi hingga N:
+            - Hitung nilai f(x0) dan f(x1)
+            - Cetak informasi iterasi
+            - Jika nilai absolut f(x1) kurang dari e:
+                - Kembalikan x1 dan jumlah iterasi
+            - Jika nilai absolut f(x0) - f(x1) kurang dari e:
+                - Cetak pesan dan kembalikan None
+            - Hitung x2 menggunakan Metode Secant
+            - Perbarui x0 dan x1
+        - Jika mencapai maksimum iterasi, cetak pesan dan kembalikan x1 dan jumlah iterasi
+
+    Definisikan simbol 'x'
+
+    Definisikan fungsi 'f' sesuai dengan persamaan yang diberikan
+
+    Cetak pesan untuk memilih metode:
+    Cetak "Pilih metode:"
+    Cetak "1. Metode Newton-Raphson"
+    Cetak "2. Metode Secant"
+
+    Terima input pilihan dari pengguna dan simpan dalam variabel 'choice'
+
+    Jika choice sama dengan 1:
+        - Terima input tebakan awal 'x0_newton' untuk Metode Newton-Raphson
+        - Hitung akar menggunakan Metode Newton-Raphson dan simpan dalam 'x_root_newton' dan 'iterasi_newton'
+        - Cetak hasil Metode Newton-Raphson dan jumlah iterasinya
+    Jika choice sama dengan 2:
+        - Terima input tebakan awal 'x0_secant' dan 'x1_secant' untuk Metode Secant
+        - Hitung akar menggunakan Metode Secant dan simpan dalam 'secant_result'
+        - Jika Metode Secant konvergen, cetak hasil dan jumlah iterasinya
+        - Jika tidak konvergen, cetak pesan
+    Jika choice tidak sama dengan 1 atau 2, cetak pesan bahwa pilihan tidak valid
+
+Selesai

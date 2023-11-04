@@ -1,0 +1,41 @@
+Prosedur gauss_seidel(A, b, x0, tol, max_iter):
+    Inisialisasi n sebagai panjang(A)
+    Salin x0 ke dalam x
+    Inisialisasi iterasi sebagai 0
+    
+    Selama iterasi kurang dari max_iter lakukan:
+        Cetak "Iterasi iterasi + 1:"
+        
+        Untuk setiap i dari 0 hingga n-1 lakukan:
+            Hitung new_xi sebagai (b[i] dikurangi jumlah dari A[i][j] dikali x[j] untuk setiap j dari 0 hingga n-1 kecuali jika j sama dengan i) dibagi A[i][i]
+            Perbarui x[i] dengan new_xi
+            Cetak "x(i+1) = new_xi dengan presisi 6 desimal"
+        
+        Hitung error_norm sebagai nilai maksimum dari absolute(x[i] dikurangi x0[i]) untuk setiap i dari 0 hingga n-1
+        Cetak "Norma Kesalahan: error_norm dengan presisi 6 desimal"
+        
+        Jika error_norm kurang dari tol maka:
+            Cetak "Konvergen! Berhenti."
+            Keluar dari perulangan
+        
+        Salin x ke dalam x0
+        Tambahkan 1 ke iterasi
+    
+    Kembalikan x
+
+Matriks koefisien A:
+    A = [[1, -1, 1],
+         [2, 6, 0],
+         [0, 6, 8]]
+
+Vektor konstanta b:
+    b = [0, 12, 20]
+
+Tebakan awal x:
+    x0 = [0, 0, 0]
+
+Toleransi dan jumlah maksimum iterasi:
+    tol = 1e-6
+    max_iter = 100
+
+Hasil = panggil gauss_seidel(A, b, x0, tol, max_iter)
